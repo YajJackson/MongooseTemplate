@@ -6,7 +6,7 @@ module.exports = function(app) {
   // Create
   app.post('/cat', (req, res) => {
     newCat = new Cat(req.body)
-    newCat.save((err) => { err ? res.json({info: 'error during cat create', error: err}) : res.json({info: 'cat created successfully'}) })
+    newCat.save((err) => { err ? res.json({info: 'error during cat create', error: err}) : res.json({info: 'cat created successfully'})})
   })
 
   // Read All
