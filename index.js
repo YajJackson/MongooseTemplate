@@ -6,12 +6,7 @@ let mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/cats')
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-  extended: true
-}))
+app.use(bodyParser.urlencoded({extended: true}))
 
 let cats = require('./cat_routes')(app)
-
-let server = app.listen(3000, function(){
-  console.log('Listening on port 3000')
-})
+let server = app.listen(3000, () => console.log('Listening on port 3000'))
