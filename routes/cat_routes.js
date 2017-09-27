@@ -1,5 +1,5 @@
 let _ = require('lodash')
-let Cat = require('./cat_model')
+let Cat = require('../models/cat_model')
 
 module.exports = function(app) {
 
